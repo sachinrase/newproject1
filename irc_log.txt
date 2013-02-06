@@ -1,0 +1,295 @@
+
+
+Welcome to the chat. You can see who's currently in the room by looking to the right. Say "Hello" to everyone by just typing in the box below and hitting return.
+
+Sachin R.	has entered the room
+Martin E.	has entered the room
+Greg	has entered the room
+Feb 6	
+8:05 AM
+matthewmccullough	Hello Yahoo-ers
+Garot C.	has entered the room
+Ashwin K.	has entered the room
+vishvesh	has entered the room
+Doug A.	has entered the room
+Gaurav M.	has entered the room
+robby k.	has entered the room
+Chiru	has entered the room
+vivekh	has entered the room
+Chiru	sorry was a bit late, what else do we need to do to get started with this training?
+Greg	are the slides available to download?
+Sachin R.	+1
+where we can see presentation
+Tim B.	Chiru: You should have Git installed and a command prompt. Matthew's talking about that now.
+Greg: better than download; they're actually online in native form. We'll send you links at the end of class.
+matthewmccullough	http://github.com/signup/free
+Tim B.	Sachin: Can you see the screen Matthew is sharing? Just watch that for now, and we'll share slides later.
+Greg	ok, thanks
+Sachin R.	Tim : Thnx
+Gaurav M.	Ok. I got the online account, do we need to have something installed on the laptop too ?
+8:10 AM
+Tim B.	Gaurav: Yes, you should have Git installed.
+Do what Matthew is showing you right now, and let me know if it works.
+Edgar W.	View paste 
+git version 1.7.10.2 (Apple Git-33)
+naveen	i have 1.7.5.4
+(Mac)
+Gaurav M.	View paste 
+[magaurav@heightask-dr ~]$ git --version
+git version 1.7.12
+tarun	i have 1.8.0.2
+Tim B.	tarun: Like a boss. Keep going.
+Gaurav M.	Thanks Tim, I got it
+Tim B.	naveen: Let's move forward with that. You might hit a speedbump later on, but just ask if anything happens and we'll figure it out then.
+8:15 AM
+i_yahoo	i just followed the commands on my machine
+and i don't see the .git
+stanleyhlng	need to show the hidden file i guess
+Tim B.	i_yahoo: type "pwd" and paste in what it tells you.
+stanleyhing: If you're looking in Windows Explorer, then yes. Otherwise, at Git Bash or a Mac Terminal window, you can type "ls -a" and see the .git folder.
+i_yahoo	got it, thanks
+Tim B.	i_yahoo: Win.
+Sachin R.	Tim , is there any way i have the list of command used by presenter , along with chat window
+Tim B.	Sachin: Not directly, but every once in a while I'll ask him to run the "history" command, so you can see that.
+Sachin R.	ok
+thanks
+vishvesh	are git commit atomic?
+8:20 AM
+Hang S.	has entered the room
+Edgar W.	ls -la to see the .git
+Tim B.	vishvesh: Yes!
+vishvesh: And remember, this commit is entirely local right now. This is just happening on disk, on your local box. We'll talk to the network later (and those operations will be atomic as well).
+vishvesh	k.. thanks
+Gaurav M.	What is this message:
+View paste 
+[magaurav@heightask-dr project1]$ git commit -m"Initial import"
+[master (root-commit) 4daa879] Initial import
+ Committer: Gaurav Maheshwari <magaurav@heightask-dr.eglbp.corp.yahoo.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+Sachin R.	what are "create mode 100644" ?
+Tim B.	Garurav: We'll configure those things in a minute. :)
+vishvesh	and what is 5 insertions
+Tim B.	vishvesh: That means you added five lines to the file.
+Gaurav M.	sure, thanks Tim.
+vishvesh	oh..k..
+Jacob	What's that historytailzsh thing
+Is that a special shell
+8:25 AM
+naveen	how to reset the author of the first.txt commit
+after setting email and name
+Tim B.	Jacob: Yeah, just some presentation magic. Matthew is using a terminal program called iTerm 2 on the Mac. It allows horizontal and vertical shell splitting.
+naveen	?
+Tim B.	naveen: That's a bit of an advanced question for now, but 'git commit --amend --reset-author -m "Initial commit"' should do it. :)
+8:30 AM
+Gaurav M.	Why use "--" for each flag vs. a single "-" ?
+Tim B.	Gaurav: As a Unix idiom, -- precedes flags that are spelled out (--message) and - precedes flags that are a single character (-m).
+Hang S.	git config --list returns empty..
+Tim B.	Gaurav: So you will see a mix of both.
+Gaurav M.	got it. thanks.
+Tim B.	Hang: That's totally fine. Follow along right now, and you'll have some config in there soon enough. :)
+Hang S.	cool.
+8:35 AM
+Greg	you would be a "Yahoo" not "Yahoo-er"
+Scott K.	has entered the room
+Hang S.	what are configs used for, if they are empty by default and work just fine?
+stanleyhlng	can i unset the config?
+matthewmccullough	View paste 
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yahoo.com"
+Tim B.	Hang: EVERYTHING! Lots of things work by default, but there's a huge amount of configurable behavior in Git.
+Hang: And really, the config we're showing you now is essentially required. It "works" without it, but you really do want a user.name and user.email set.
+Hang S.	I see. thanks, Tim.
+Tim B.	Hang: You bet!
+8:40 AM
+stanleyhlng	git config --local --unset user.name , it works ;)
+robby k.	has left the room
+Ollie R.	has entered the room
+8:45 AM
+Tim B.	Ollie: Answer to your config question: no. Config is outside of the repo history.
+Ollie R.	Thanks Tim
+Tim B.	Ollie: My pleasure.
+ 
+ 	
+
+ 
+trainer-matthew
+Add a topic
+Leave Who's here?
+Ashwin Kamath
+balaji
+Brian Kim
+Chiru
+Doug Alfonso
+Edgar Whipple
+Freddy
+Garot Conklin
+Gaurav Maheshwari
+Greg
+gully
+Hang Su
+i_yahoo
+Jacob
+James Nessen
+Jessica Roll
+kenseb
+Martin Eckert
+matthewmccullough
+nancytam
+naveen
+Ollie Ready
+Praveen B
+rubenct
+Sachin Rase
+sachin tripathi
+Scott Kruger
+stanleyhlng
+sushant
+tarun
+Tim Berglund (Trainer)
+Troy Neeriemer
+vishvesh
+vivekh
+wanlin pang
+Upload a file  
+ 
+
+
+
+
+Welcome to the chat. You can see who's currently in the room by looking to the right. Say "Hello" to everyone by just typing in the box below and hitting return.
+
+Doug A.	that makes sense
+usually if there's even close to a 50% change to my perl or php, something else probably went wrong in the saving of the file
+10:15 AM
+Greg	when would you want to do a git reset without --hard as the mode?
+Tim B.	Doug: Yup! If it's more like 5% or 10% across a refactor-y move, that's more like it.
+Troy N.	git stage seems slightly less confusing than git add
+Tim B.	Greg: We were using reset earlier (with no --hard) to unstage files.
+Troy: You are not the first to suggest this. Alas, we don't make the rules. ;)
+Troy N.	:-)
+Greg	I guess I don't understand when you would want to use other modes for reset, such as --soft
+Ollie R.	greg, you're not alone, reset options can be complicated
+Tim B.	Greg: --soft is a rarely used mode. --mixed and --hard are much more common.
+Greg: And nobody every types --mixed, since it's the default, but it's the way you unstage stuff, so it's a good one to know.
+Greg: And --hard is *extremely* useful, although dangerous.
+Edgar W.	And yet, "all" for git commit is lowercase a.
+Greg	ok thanks. dangerous meaning you could blow away code that wasn't committed, right?
+Tim B.	Edgar: There are only so many letters in the alphabet. Sometimes they collide. After a certain point, you'll stop looking for the word they stand for and just love them for what they are.
+Edgar W.	Just sayin...
+Tim B.	Edgar; I hear you. :)
+10:20 AM
+Tim B.	Greg: Yes. It's the one way you can lose data in Git. Modified files are blown away by reset --hard.
+kenseb	has left the room
+Ollie R.	what does it show if you mv file, then do status before add?
+Edgar W.	Change delta computed on line by line basis, or byte stream delta?
+10:25 AM
+Edgar W.	He said "it" again!
+Tim B.	:)
+Edgar: Just line-by-line.
+Edgar W.	Thanks.
+Tim B.	Ollie: If you "git mv," it looks just like the "git add -A ..."
+They do the same thing. You should use "git add -A" when some external tool has done the moving, like if you're a Java dev and you used Eclipse to move a bunch of classes from one package to another, or a PHP dev and you reorganized directories and changed a bunch of includes.
+Ollie R.	thanks tim, so manually on the command line, git mv is generally better (less typing)
+Tim B.	Ollie: Yes. If you're moving a single file at a time, git mv is the win.
+matthewmccullough	https://github.com/github/gitignore
+https://github.com/github/gitignore
+10:30 AM
+rubenct	has left the room
+matthewmccullough	View paste 
+
+https://github.com/github/gitignore
+Edgar W.	Does .gitignore need to include itself?
+gully	i thought the link you spread earlier here named the file ./.gitignore_global ?
+Edgar W.	View paste 
+appleguess-lm /project1> cat > .gitignore
+appleguess-lm /project1> git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+nothing added to commit but untracked files present (use "git add" to track)
+appleguess-lm /project1>
+Ah...
+Ollie R.	gully: that was my link, and the filename is arbitrary until it's put into the config
+Tim B.	gully: I don't recall that, but I trust you! You can call the file anything you can. The restriction is that you name the file by setting the "core.excludesfile" config parameter to point to the file.
+Ollie R.	here's the link again: https://help.github.com/articles/ignoring-files
+Tim B.	Ollie: Ah, that's why I don't recall that. Thanks again fer the link. :)
+10:45 AM
+balaji	~<version>
+is the number of versions to go back from now?
+how do i go to an absolute version?
+say to the 10th version of the master?
+got it thanks
+Tim B.	git help gitrevisions
+10:50 AM
+balaji	and i am assuming master is hte master branch
+and i ont htink we have covered branches, yet
+right?
+matthewmccullough	git help gitrevisions
+Chiru	does "git" stand for something?
+Tim B.	balaji: Correct. "master" refers to the default branch, which we have not covered yet.
+vivekh	And head is currently pointing to master ?
+Tim B.	Chiru: Sort of. It's a British term that translates to "idiot" in American English. The man who named Git (Linus Torvalds) jokingly said that he named it after himself. :)
+Chiru: Linux is also named for Linus. So he named his two major projects after himself.
+Chiru	cool. thanks
+Tim B.	vivekh: HEAD points to the commit you currently have checked out. You'll see it move around when we start branching.
+vivekh: It points to master if you're "on" master. If you're in detached head state, it's going to point to a commit that doesn't have any other name.
+10:55 AM
+Greg	Can you push from the command line without doing anything on the web? Or is that setup required?
+Tim B.	Greg: You need to create a repo to push to, so you *sort of* have to do the web work. There's a command called "hub" that lets you do that repo creation from the command line, though.
+Doug A.	If it's not already in the plan, I'd like to know how to deal with fast-forwards
+Edgar W.	View paste 
+appleguess-lm /project1> ls -la ~/.ssh/{*.pub,config}
+-rw-r--r--  1 ewhipple  staff  182 Feb  6 10:02 /Users/ewhipple/.ssh/config
+-rw-r--r--  1 ewhipple  staff  396 Feb  6 08:52 /Users/ewhipple/.ssh/ewhipple-github.com_rsa.pub
+-rw-r--r--  1 ewhipple  staff  241 Jan 11 17:02 /Users/ewhipple/.ssh/id_rsa.pub
+appleguess-lm /project1> cat ~/.ssh/config
+Protocol 2,1
+ForwardAgent yes
+StrictHostKeyChecking no
+Host ew-github
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/ewhipple-github.com_rsa
+     IdentitiesOnly yes
+appleguess-lm /project1>
+And
+View paste 
+appleguess-lm /project1> git config  remote.origin.url
+ew-github:ewhipple/project1.git
+11:00 AM
+Chiru	can we have the notes/presentation?
+Tim B.	https://github.com/github/trainingteam/issues
+matthewmccullough	http://teach.github.com/presentations/git-found...
+Hang S.	thank you very much, Matthew and Tim!
+matthewmccullough	Slides: http://teach.github.com/presentations/git-found...
+Edgar W.	Let's you have a separate ssh key for github.com while your Yahoo! ssh key is the default (id_rsa).
+Chiru	thanks guys!
+gully	thanks Edgar
+Gaurav M.	thanks much Matthew and Tim
+James N.	thanks guys, excellent session!
+looking forward to tomorrow
+vishvesh	Thanks Tim & Matthew.
+Ollie R.	thanks edgar, good stuff
+Tim B.	Doug: We'll talk through fast-forwards tomorrow; don't you worry.
+Greg	thanks!
+i_yahoo	is there a way to "delete" a repository on github.com?
+Doug A.	thanks!
+Sachin R.	thanks !
+sachin t.	thanks
+Tim B.	Yes. Click on settings at the top right, then scroll down.
+
+
+
