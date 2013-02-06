@@ -1,0 +1,129 @@
+bash-3.2$ git -version
+Unknown option: -version
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+bash-3.2$ git --version
+git version 1.7.12.4 (Apple Git-37)
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ pwd
+/Users/sachinr/Desktop
+bash-3.2$ mkdir git_class
+bash-3.2$ cd git_class/
+bash-3.2$ git init newproject1
+Initialized empty Git repository in /Users/sachinr/Desktop/git_class/newproject1/.git/
+bash-3.2$ ls
+newproject1
+bash-3.2$ cd newproject1/
+bash-3.2$ ls
+bash-3.2$ pwd
+/Users/sachinr/Desktop/git_class/newproject1
+bash-3.2$ git init 
+Reinitialized existing Git repository in /Users/sachinr/Desktop/git_class/newproject1/.git/
+bash-3.2$ pwd
+/Users/sachinr/Desktop/git_class/newproject1
+bash-3.2$ vim one.text
+bash-3.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	one.text
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git add one.text 
+bash-3.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   one.text
+#
+bash-3.2$ git commit -m "My test commit"
+[master (root-commit) 5442b30] My test commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 one.text
+bash-3.2$ find . 
+.
+./.DS_Store
+./.git
+./.git/branches
+./.git/COMMIT_EDITMSG
+./.git/config
+./.git/description
+./.git/FETCH_HEAD
+./.git/HEAD
+./.git/hooks
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/update.sample
+./.git/index
+./.git/info
+./.git/info/exclude
+./.git/logs
+./.git/logs/HEAD
+./.git/logs/refs
+./.git/logs/refs/heads
+./.git/logs/refs/heads/master
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/origin
+./.git/logs/refs/remotes/origin/master
+./.git/objects
+./.git/objects/17
+./.git/objects/17/705a816cdbdb00a027e1d8a41ce1c944e865d2
+./.git/objects/54
+./.git/objects/54/42b309f480351a5587c7a3730ef2dacb79861d
+./.git/objects/c4
+./.git/objects/c4/e0fa18d830adca765ed001f04d2833eff46a87
+./.git/objects/info
+./.git/objects/pack
+./.git/refs
+./.git/refs/heads
+./.git/refs/heads/master
+./.git/refs/remotes
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/master
+./.git/refs/tags
+./one.text
+bash-3.2$ less ./.git/objects/54/42b309f480351a5587c7a3730ef2dacb79861d
+"./.git/objects/54/42b309f480351a5587c7a3730ef2dacb79861d" may be a binary file.  See it anyway? 
+bash-3.2$ less ./.git/objects/54/42b309f480351a5587c7a3730ef2dacb79861d
+"./.git/objects/54/42b309f480351a5587c7a3730ef2dacb79861d" may be a binary file.  See it anyway? 
+bash-3.2$ less ./.git/objects/17/705a816cdbdb00a027e1d8a41ce1c944e865d2
+"./.git/objects/17/705a816cdbdb00a027e1d8a41ce1c944e865d2" may be a binary file.  See it anyway? 
+bash-3.2$ less ./.git/objects/17/705a816cdbdb00a027e1d8a41ce1c944e865d2
+"./.git/objects/17/705a816cdbdb00a027e1d8a41ce1c944e865d2" may be a binary file.  See it anyway? 
+bash-3.2$ cat ./.git/objects/info
+cat: ./.git/objects/info: Is a directory
+bash-3.2$ cat ./.git/objects/info/
+bash-3.2$ less ./.git/refs/heads/master
+bash-3.2$ git config --list 
+user.name=Sachin Rase
+user.email=sachin1rase@yahoo.com
+core.editor=vim
+merge.tool=vimdiff
+color.status=auto
+color.branch=auto
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=false
+remote.origin.url=https://github.com/sachinrase/newproject1.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
